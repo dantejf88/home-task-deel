@@ -1,50 +1,13 @@
-# React + TypeScript + Vite
+# Deel Home Task
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is the app for the assessment task in the hiring process of Deel. The project was created with Vite, with the template for React + Typescript.
 
-Currently, two official plugins are available:
+Install dependencies runing: `yarn (or your favorite package manager) install`
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Then run dev with: `yarn run dev`.
 
-## Expanding the ESLint configuration
+Or build with: `yarn run build`.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+I did not create an env var file because we are using a public API, otherwise it would be necessary to keep sensitive information protected.
 
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
-
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+I have been focusing on the user experience, and the requirement of not using any external library, implies creating many local states to cover the different use cases of an Autocomplete component. One thing I still have to do, due to time constraints, is the keyboard control of the component, which I have not been able to work on because I prefer to respect the 2 working day deadline, and I have not had the time available that I would have liked during these two days.
